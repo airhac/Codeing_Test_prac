@@ -1,17 +1,36 @@
+# from collections import deque
+# def BFS(graph, start, visited):
+#     visited[start] = True
+#     queue = deque([start])
+    
+#     while queue:
+#         v = queue.popleft()
+#         print(v, end='')
+#         for i in graph[v]:
+#             if not visited[i]:
+#                 queue.append(i)
+#                 visited[i] = True
+# from collections import deque
+# def BFS(graph, start, visited):
+#     visited[start] = True
+#     queue =  deque([start])
+#     while queue:
+#         v = queue.popleft()
+#         for i in graph[v]:
+#             if not visited[i]:
+#                 queue.append(i)
+#                 visited[i] = True                
 from collections import deque
-def BFS(graph, start, visited):
+def BFS(graph, start, visted):
     visited[start] = True
     queue = deque([start])
     
     while queue:
-        v = queue.popleft()
-        print(v, end='')
-        for i in graph[v]:
+        now = queue.popleft()
+        for i in graph[now]:
             if not visited[i]:
                 queue.append(i)
                 visited[i] = True
-                
-
 graph = [
     [],
     [2,3,8],
